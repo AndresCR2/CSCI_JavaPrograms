@@ -1,0 +1,68 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class HotelA{
+  public static void main(String[]args)throws IOException{
+    Scanner fileName = new Scanner(new File("Part 1.txt"));
+    fileName.useDelimiter("/");
+
+    Guests[] scanFile = new Guests [34];
+    String fName, lName, flName, address, cityState, city, state, ftGuest, sGuest, tGuest, fGuest;
+    int count = 0, totalGuest, numGuest;                    
+  
+    while(fileName.hasNext()){
+    fName = fileName.next();
+    lName = fileName.next();
+    flName = fName+lName;
+    address = fileName.next();
+    cityState = fileName.next();
+    String[] cyState = cityState.split(", ");
+    city = cyState[0];
+    state = cyState[0].toUpperCase();
+    numGuest = fileName.nextInt();
+    
+    if(numGuest == 1){
+      scanFile[count] = new Guests(fName, address, city, state, 2, count);
+    }
+    else if (numGuest == 2){
+  
+      sGuest = fileName.next();
+      scanFile[count] = new Guests(fName, address, city, state, 2, count, sGuest);
+    }
+    else if (numGuest == 3){
+   
+      sGuest = fileName.next();
+      tGuest = fileName.next();
+      scanFile[count] = new Guests(fName, address, city, state, 2, count, sGuest, tGuest);
+    }
+    else if (numGuest == 4){
+  
+      sGuest = fileName.next();
+      tGuest = fileName.next();
+      fGuest = fileName.next();
+      scanFile[count] = new Guests(fName, address, city, state, 2, count, sGuest, tGuest, fGuest); 
+    }
+    count++;
+    }
+    for(int counter = 0; counter < 33; counter++){
+    System.out.println(scanFile[counter].toString());
+    }
+    }
+  }
+
+  
+      
+    
+    
+    
+
+          
+                         
+  
+                         
+                         
+                        
+                         
+    
+    
+    

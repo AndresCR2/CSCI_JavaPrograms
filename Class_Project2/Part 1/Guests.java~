@@ -1,0 +1,50 @@
+public class Guests{
+    
+    private String primaryName, address, city, state, secondName, thirdName, fourthName;
+    private int guests, num_room;
+    
+    public Guests(String pName, String nAddress, String nCity, String nState, int numGuests, int nRoom){
+      primaryName = pName;
+      address = nAddress;
+      city = nCity;
+      state = nState;
+      guests = numGuests;
+      num_room = nRoom;}
+    
+    public Guests(String pName, String nAddress, String nCity, String nState, int numGuests, int nRoom, String sName){
+      primaryName = pName;
+      address = nAddress;
+      city = nCity;
+      state = nState;
+      guests = numGuests;
+      num_room = nRoom;
+      secondName = sName;}
+    
+    public Guests(String pName, String nAddress, String nCity, String nState, int numGuests, int nRoom, String sName, String tName){
+      primaryName = pName;
+      address = nAddress;
+      city = nCity;
+      state = nState;
+      guests = numGuests;
+      num_room = nRoom;
+      secondName = sName;
+      thirdName = tName;}
+    
+   public Guests(String pName, String nAddress, String nCity, String nState, int numGuests, int nRoom, String sName, String tName, String fName){
+      primaryName = pName;
+      address = nAddress;
+      city = nCity;
+      state = nState;
+      guests = numGuests;
+      num_room = nRoom;
+      secondName = sName;
+      thirdName = tName;
+      fourthName = fName;}
+    
+    public String toString(){
+      return ("Family Name: " + primaryName.trim() + "\t City: " + city + "\t State: " + state + "\t Room Number: " + num_room);}
+}
+
+
+      
+  
